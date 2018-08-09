@@ -2,7 +2,7 @@
   <v-flex class="mr-0 ml-4 border blocklight best-questions right-block mb-3">
     <v-flex class="pt-2 ">
       <v-layout justify-center column class="reg-17 textdarkgrey-text mb-3 text-xs-center">
-        ЛУЧШИЕ ВОПРОСЫ
+        ЛУЧШИЕ КОММЕНТАРИИ
         <v-layout column justify-center>
           <v-list v-for="person in persons" :key="person.id" dense class="pa-0 mb-0 blocklight">
             <v-divider class="ml-4 divider"></v-divider>

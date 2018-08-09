@@ -92,6 +92,9 @@
       textField.style.paddingLeft = "5px";
       textField.classList.add("border");
     },
+    components:{
+
+    }
   }
 
 </script>

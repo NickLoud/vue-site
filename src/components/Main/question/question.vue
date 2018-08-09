@@ -18,11 +18,11 @@
                 <img :src="question.avatar">
               </v-list-tile-avatar>
               <v-list-tile-content>
-                <v-list-tile-title class="reg-15"> 
+                <v-list-tile-title class="reg-15">
                   <a :href="'/profile/' + question.ownerId"> {{ question.ownerName }} </a>
                 </v-list-tile-title>
-                <v-list-tile-sub-title class="reg-15 textgrey-text"> 
-                  {{ question.date }} 
+                <v-list-tile-sub-title class="reg-15 textgrey-text">
+                  {{ question.date }}
                 </v-list-tile-sub-title>
               </v-list-tile-content>
               <v-list-tile-action>
@@ -53,8 +53,8 @@
               </v-flex>
     <!-- tags -->
               <v-flex class="text-xs-center">
-                <v-btn 
-                  v-for="(tag, index) in question.tags" 
+                <v-btn
+                  v-for="(tag, index) in question.tags"
                   :key="index"
                   outline
                   small
@@ -73,15 +73,15 @@
           <v-container pa-0 pt-1>
             <v-flex>
             <v-flex left>
-              <v-btn 
-                v-for="(btn, index) in bottom_left" 
-                :key="index" 
+              <v-btn
+                v-for="(btn, index) in bottom_left"
+                :key="index"
                 :ripple="false"
                 flat
                 class="mr-0"
                 @click="click_left(index)"
               >
-                <v-icon 
+                <v-icon
                   :color="btn.active ? 'white' : 'grey lighten-1'"> {{ btn.icon }}</v-icon>
                 <span class="grey--text text--lighten-2 pl-1"> {{ btn.count }} </span>
               </v-btn>
@@ -94,9 +94,9 @@
               <v-btn icon :ripple="false">
                 <v-icon color="white">share</v-icon>
               </v-btn>
-              <v-btn icon :ripple="false">
-                <v-icon color="white">more_horiz</v-icon>
-              </v-btn>
+
+              <three-dots></three-dots>
+
             </v-flex>
             </v-flex>
           </v-container>
@@ -117,7 +117,7 @@
 
 <script>
 import answer from './answer'
-
+import threeDots from './threeDotsInQuestion'
 export default {
   data() {
     return {
@@ -200,7 +200,8 @@ export default {
     }
   },
   components: {
-    'answer' : answer
+    'answer' : answer,
+    'three-dots' : threeDots,
   }
 }
 </script>
